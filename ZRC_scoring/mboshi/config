@@ -1,0 +1,22 @@
+
+# name of the corpus
+export CORPUS=mboshi
+
+
+# These varibles are set for the file script/prep_gold.py
+# -------------------------------------------------------
+
+# file name coding by speaker with python slicing format (https://docs.python.org/2/tutorial/introduction.html#strings)
+#export SPK_SEG=':3' # i.e.: the file S01_010293 is for speaker S01 then SPK_SEG will be ":3"  
+export SPK_SEG=':' # all for LANG2_11
+
+# variables that controls the random ngram gold search (scripts/prep_gold.py L226)
+export N_FRAG=2000    # works fine for corpus~20-50h, for a bigger size increase it
+export N_SHUFFLES=10  # ibid. if the corpus is small then reduce these two values proportionaly
+
+# number of cpus used in the previous random search
+export NSLOTS=10
+
+# enviroment with tde, ...
+source activate zerospeech 
+#source activate prep_corpus

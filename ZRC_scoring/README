@@ -1,0 +1,23 @@
+####what i did before be able launching run_eval.sh
+
+#install conda
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh (+ follow instructions)
+
+
+
+#create right env
+conda create --name zerospeech python=2
+
+#intstall zerospeech eval tools
+pushd /home/getalp/besacier/BACKUP-JSALT/TOOLS
+source activate zerospeech
+pip install git+https://github.com/bootphon/tde@zerospeech2017 --user
+
+
+
+
+Before launching run_eval.sh, you must do source activate zerospeech
+(+ a few pip install MODULE to run)
+
+
