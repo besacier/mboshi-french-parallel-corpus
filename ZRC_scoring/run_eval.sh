@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 
-SCRIPT='/home/getalp/besacier/BACKUP-JSALT/MBOSHI/Gold-Mboshi-July2017/mboshi/eval2.py'
-FILE='/home/getalp/besacier/BACKUP-JSALT/MBOSHI/Gold-Mboshi-July2017/ex_classes/mboshi.goldwords'
+SCRIPT='/home/getalp/besacier/BACKUP-JSALT/MBOSHI/cleaning/mboshi-french-parallel-corpus/ZRC_scoring/mboshi/eval2.py'
+FILE='/home/getalp/besacier/BACKUP-JSALT/MBOSHI/cleaning/mboshi-french-parallel-corpus/ZRC_scoring/ex_classes/mboshi.phones_unsup_lucas'
 #FILE='/home/getalp/besacier/BACKUP-JSALT/MBOSHI/cascading/hard_seg_unsup_lucas_forced_word.fa'
-EVAL='/home/getalp/besacier/BACKUP-JSALT/MBOSHI/Gold-Mboshi-July2017/eval'
+EVAL='/home/getalp/besacier/BACKUP-JSALT/MBOSHI/cleaning/mboshi-french-parallel-corpus/ZRC_scoring/eval'
 
 source activate zerospeech
 
-pushd /home/getalp/besacier/BACKUP-JSALT/MBOSHI/Gold-Mboshi-July2017/mboshi
+pushd /home/getalp/besacier/BACKUP-JSALT/MBOSHI/cleaning/mboshi-french-parallel-corpus/ZRC_scoring/mboshi
 # eval
 
 #line below is not run if you already have the .classes file
