@@ -22,6 +22,15 @@ speakers: {'abiayi': 3682, 'kouarata': 1234, 'martial': 215}
 source: {'dico': 350, 'part': 164}
 speakers: {'abiayi': 351, 'kouarata': 126, 'martial': 37}
 
+\#lines: 514
+\#token: 2993
+\#types: 1146
+
+
 - train:
 source: {'dico': 3314, 'part': 1303}
 speakers: {'abiayi': 3331, 'kouarata': 1108, 'martial': 178}
+
+\#lines: 4617
+\#token: 27568
+\#types: 6197
