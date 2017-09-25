@@ -18,6 +18,9 @@ train_dir = '/vol/work/godard/dat/mboshi-french-parallel-corpus/full_corpus_spkr
 all_dir_ns = '/vol/work/godard/dat/mboshi-french-parallel-corpus/full_corpus_newsplit/all/'
 dev_dir_ns = '/vol/work/godard/dat/mboshi-french-parallel-corpus/full_corpus_newsplit/dev/'
 train_dir_ns = '/vol/work/godard/dat/mboshi-french-parallel-corpus/full_corpus_newsplit/train/'
+all_dir_fa = '/vol/work/godard/dat/mboshi-french-parallel-corpus/forced_alignments_supervised_spkr/all/'
+dev_dir_fa = '/vol/work/godard/dat/mboshi-french-parallel-corpus/forced_alignments_supervised_spkr/dev/'
+train_dir_fa = '/vol/work/godard/dat/mboshi-french-parallel-corpus/forced_alignments_supervised_spkr/train/'
 
 
 def make_sent_list_from_multiple_files(source_dir, extension):
@@ -133,6 +136,8 @@ bad_fa_txt_list = ['2015-09-07-14-53-15_samsung-SM-T530_mdw_elicit_Dico19_70',
 # action_on_file_list(all_dir_ns, 'stm', bad_fa_txt_list, action='rm', dry_run=False)
 # action_on_file_list(all_dir_ns, 'wav', bad_fa_txt_list, action='rm', dry_run=False)
 
+# action_on_file_list(all_dir_fa, 'txt', bad_fa_txt_list, action='rm', dry_run=False)
+
 
 def sample_dev_from_dict(d):
     """Samples a dev set that won't overlap with the train set."""
@@ -165,7 +170,7 @@ def sample_dev_from_dict(d):
 #     pickle.dump(dev_list_ns, f)
     
 # Retrieve dev_list
-with open('dev_list.pkl', 'rb') as f:
+with open('/vol/work/godard/dat/mboshi-french-parallel-corpus/full_corpus_newsplit/dev_list.pkl', 'rb') as f:
     dev_list_ns = pickle.load(f)
 
 # Move proper files from train to dev    
@@ -177,8 +182,10 @@ with open('dev_list.pkl', 'rb') as f:
 # action_on_file_list(train_dir_ns, 'stm', dev_list_ns, action='mv', target_dir=dev_dir_ns, dry_run=False)
 # action_on_file_list(train_dir_ns, 'wav', dev_list_ns, action='mv', target_dir=dev_dir_ns, dry_run=False)
     
+# action_on_file_list(train_dir_fa, 'txt', dev_list_ns, action='mv', target_dir=dev_dir_fa, dry_run=False)
 
-calculate_text_overlap(dev_dir_ns, train_dir_ns)
+
+# calculate_text_overlap(dev_dir_ns, train_dir_ns)
     
 # Print stats
 dev_dict_ns = make_dictionary(dev_dir_ns, 'mb.cleaned')
