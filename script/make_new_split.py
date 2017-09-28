@@ -33,10 +33,10 @@ def make_sent_list_from_multiple_files(source_dir, extension):
     return lines
 
 
-def calculate_text_overlap(dir1, dir2):
+def calculate_text_overlap(dir1, dir2, extension1, extension2):
     count = 0
-    lines_1 = make_sent_list_from_multiple_files(dir1, 'mb.cleaned')
-    lines_2 = make_sent_list_from_multiple_files(dir2, 'mb.cleaned')
+    lines_1 = make_sent_list_from_multiple_files(dir1, extension1)
+    lines_2 = make_sent_list_from_multiple_files(dir2, extension2)
     for l in lines_1:
         if l in lines_2:
             count += 1
@@ -185,7 +185,7 @@ with open('/vol/work/godard/dat/mboshi-french-parallel-corpus/full_corpus_newspl
 # action_on_file_list(train_dir_fa, 'txt', dev_list_ns, action='mv', target_dir=dev_dir_fa, dry_run=False)
 
 
-# calculate_text_overlap(dev_dir_ns, train_dir_ns)
+calculate_text_overlap(dev_dir_ns, train_dir_ns, 'mb.cleaned', 'mb.cleaned')
     
 # Print stats
 dev_dict_ns = make_dictionary(dev_dir_ns, 'mb.cleaned')
