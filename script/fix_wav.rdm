@@ -1,0 +1,19 @@
+(lucas)
+Hi Laurent,
+
+There are some audio wav files that are corrupted. Most likely the length stored in some wav files does not match the actual number of samples. This may affect some softwares, for instance HCopy (from HKT) will fail to extract features for those corrupted files. I've managed to fix the problem by using the following:
+
+    $ cat fix_wav.sh
+    #!/bin/bash
+    wav="$1"
+    outdir="$2"
+    bname=$(basename $wav)
+    sox --ignore-length "$wav" "$outdir/$bname"
+    $ mkdir mboshi-french-parallel-corpus/full_corpus_newsplit/all.fixed
+    $ find mboshi-french-parallel-corpus/full_corpus_newsplit/all -name '*wav' -exec ./fix_wav.sh {} mboshi-french-parallel-corpus/full_corpus_newsplit/all.fixed \;
+I was then able to use HTK to extract the features for all the files.
+
+Best,
+Lucas
+
+=======
