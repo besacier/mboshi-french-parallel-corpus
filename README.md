@@ -15,5 +15,5 @@ experiments and their evaluation.
 * ZRC_scoring: contains scripts + ref files to score spoken word discovery with the Zero Resource Challenge Metrics (see http://zerospeech.com and http://sapience.dec.ens.fr/bootphon/2017/page_3.html if you’re not familiar with these metrics)
 the ref files for ZCR metrics were obtained from the above forced alignements
 
-* lrec2018-submission.pdf : our submission to LREC2018 that describes this dataset
+* lrec2018-submission.pdf : our submission to LREC2018 that describes this dataset - see http://arxiv.org/abs/1710.03501 
 
