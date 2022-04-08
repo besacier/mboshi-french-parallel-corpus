@@ -17,7 +17,7 @@ the ref files for ZCR metrics were obtained from the above forced alignements
 
 * lrec2018-submission.pdf : our LREC2018 paper that describes this dataset - see http://arxiv.org/abs/1710.03501 - use the following bibtex if you use this dataset in your publications:
 
-``'
+```
 @article{DBLP:journals/corr/abs-1710-03501,
   author    = {Pierre Godard and
                Gilles Adda and
