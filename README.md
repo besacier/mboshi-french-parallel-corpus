@@ -15,8 +15,9 @@ experiments and their evaluation.
 * ZRC_scoring: contains scripts + ref files to score spoken word discovery with the Zero Resource Challenge Metrics (see http://zerospeech.com and http://sapience.dec.ens.fr/bootphon/2017/page_3.html if you’re not familiar with these metrics)
 the ref files for ZCR metrics were obtained from the above forced alignements
 
-* lrec2018-submission.pdf : our LREC2018 paper that describes this dataset - see http://arxiv.org/abs/1710.03501 - use the following bibtex if you cite this paper in your publications
+* lrec2018-submission.pdf : our LREC2018 paper that describes this dataset - see http://arxiv.org/abs/1710.03501 - use the following bibtex if you use this dataset in your publications:
 
+``'
 @article{DBLP:journals/corr/abs-1710-03501,
   author    = {Pierre Godard and
                Gilles Adda and
@@ -44,6 +45,5 @@ the ref files for ZCR metrics were obtained from the above forced alignements
   biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1710-03501},
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
-
- 
+```
 
